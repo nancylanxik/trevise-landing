@@ -107,7 +107,7 @@ export default function HomePage() {
                 },
                 {
                   label: "Imagery",
-                  today: "retired campaign",
+                  today: "Retired campaign",
                   trevise: "Current-season campaign",
                 },
                 {
@@ -117,8 +117,8 @@ export default function HomePage() {
                 },
                 {
                   label: "Brand voice",
-                  today: "missing",
-                  trevise: "aligned",
+                  today: "Missing",
+                  trevise: "Aligned",
                 },
               ].map((row) => (
                 <div
@@ -200,87 +200,41 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Three steps */}
+          {/* Three steps — Step 01 has privacy boundary embedded */}
           <div className="mt-24 md:mt-32 grid md:grid-cols-3 gap-12 md:gap-16">
-            {[
-              {
-                num: "01",
-                title: "Connect",
-                body: "We integrate with your SAP, PIM, DAM, BI tools (Power BI, Looker), and the spreadsheets your team actually uses.",
-              },
-              {
-                num: "02",
-                title: "Reconcile",
-                body: "We turn fragmented data into a structured, brand-aware catalog. Materials, sizing, current-season imagery, and brand voice are treated as first-class attributes.",
-              },
-              {
-                num: "03",
-                title: "Publish",
-                body: "Your structured feed publishes to the Agentic Commerce Protocol and equivalent standards. ChatGPT, Gemini, Claude, and Perplexity describe and depict your products correctly, in any language, refreshed continuously.",
-              },
-            ].map((s) => (
-              <div key={s.num} className="border-t border-ink pt-8">
-                <p className="font-serif text-7xl text-ink/20 leading-none">{s.num}</p>
-                <h3 className="mt-6 font-serif text-3xl">{s.title}</h3>
-                <p className="mt-4 text-ink/70 leading-relaxed">{s.body}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Data privacy callout */}
-          <div className="mt-20 md:mt-28 border border-ink/15 bg-cream p-8 md:p-12">
-            <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
-              <div className="md:col-span-4">
-                <p className="eyebrow text-ink/55">On data privacy</p>
-                <p className="mt-5 font-serif text-2xl md:text-3xl leading-tight">
-                  Your unreleased work stays{" "}
-                  <span className="italic">unreleased.</span>
+            <div className="border-t border-ink pt-8">
+              <p className="font-serif text-7xl text-ink/20 leading-none">01</p>
+              <h3 className="mt-6 font-serif text-3xl">Connect</h3>
+              <p className="mt-4 text-ink/70 leading-relaxed">
+                We integrate with your SAP, PIM, DAM, BI tools (Power BI, Looker), and the spreadsheets your team actually uses.
+              </p>
+              <div className="mt-6 pt-5 border-t border-ink/15">
+                <p className="font-serif italic text-base text-ink/85">
+                  Your unreleased work stays unreleased.
+                </p>
+                <p className="mt-2 text-sm text-ink/60 leading-relaxed">
+                  Only current and past-season products already in market. Future designs, unreleased lookbooks, and regional exclusives stay where you keep them.
                 </p>
               </div>
-              <div className="md:col-span-8">
-                <p className="text-ink/75 leading-relaxed">
-                  Trevise ingests only current-season and past-season products that are already on the market. Future-season designs, internal lookbook concepts that never went into production, and market-specific exclusives never leave your systems. The boundary is set by what your brand has already chosen to make public; nothing else crosses it.
-                </p>
-                <ul className="mt-5 space-y-1.5 text-sm text-ink/65">
-                  <li>· Current-season and past-season products in market: <span className="text-ink">included</span></li>
-                  <li>· Future-season designs not yet released: <span className="text-ink">excluded</span></li>
-                  <li>· Lookbook concepts never produced: <span className="text-ink">excluded</span></li>
-                  <li>· Market-specific or regional exclusives: <span className="text-ink">excluded</span></li>
-                </ul>
-              </div>
+            </div>
+            <div className="border-t border-ink pt-8">
+              <p className="font-serif text-7xl text-ink/20 leading-none">02</p>
+              <h3 className="mt-6 font-serif text-3xl">Reconcile</h3>
+              <p className="mt-4 text-ink/70 leading-relaxed">
+                We turn fragmented data into a structured, brand-aware catalog. Materials, sizing, current-season imagery, and brand voice are treated as first-class attributes.
+              </p>
+            </div>
+            <div className="border-t border-ink pt-8">
+              <p className="font-serif text-7xl text-ink/20 leading-none">03</p>
+              <h3 className="mt-6 font-serif text-3xl">Publish</h3>
+              <p className="mt-4 text-ink/70 leading-relaxed">
+                Your structured feed publishes to the Agentic Commerce Protocol and equivalent standards. ChatGPT, Gemini, Claude, and Perplexity describe and depict your products correctly, in any language, refreshed continuously.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stat band */}
-      <section className="bg-stone px-6 md:px-12 py-24 md:py-32">
-        <div className="max-w-7xl mx-auto">
-          <p className="eyebrow text-ink/50 mb-12 text-center">By the numbers</p>
-          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-ink/10">
-            <div className="py-12 md:py-0 md:px-12 text-center">
-              <p className="font-serif text-7xl md:text-9xl leading-none">
-                10<span className="text-ink/40">+</span>
-              </p>
-              <p className="mt-6 text-ink/70 leading-relaxed max-w-[260px] mx-auto">
-                internal systems holding fragments of a single product's data inside a typical fashion brand
-              </p>
-            </div>
-            <div className="py-12 md:py-0 md:px-12 text-center">
-              <p className="font-serif text-7xl md:text-9xl leading-none">5</p>
-              <p className="mt-6 text-ink/70 leading-relaxed max-w-[260px] mx-auto">
-                languages a global brand maintains in parallel, often inconsistently
-              </p>
-            </div>
-            <div className="py-12 md:py-0 md:px-12 text-center">
-              <p className="font-serif text-7xl md:text-9xl leading-none">0</p>
-              <p className="mt-6 text-ink/70 leading-relaxed max-w-[260px] mx-auto">
-                control most brands have today over what AI says or shows about their products
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Why now / Thesis */}
       <section className="bg-cream px-6 md:px-12 py-28 md:py-40 border-y border-ink/10">
@@ -289,6 +243,27 @@ export default function HomePage() {
           <h2 className="mt-6 font-serif text-5xl md:text-8xl leading-[0.95] max-w-4xl tracking-tight">
             AI is leaving the <span className="italic">chat box.</span>
           </h2>
+
+          {/* 4 stats embedded — supporting evidence for the urgency thesis */}
+          <div className="mt-14 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-ink/15 border-y border-ink/15 py-10">
+            {[
+              { num: "100", plus: true, body: "attributes per product, from fit and materials to sourcing" },
+              { num: "10", plus: true, body: "internal systems holding fragments of a single product's data" },
+              { num: "5", plus: false, body: "languages a global brand maintains, often inconsistently" },
+              { num: "0", plus: false, body: "control most brands have over what AI says about them" },
+            ].map((s, i) => (
+              <div key={i} className="md:px-8 text-center">
+                <p className="font-serif text-5xl md:text-6xl leading-none">
+                  {s.num}
+                  {s.plus && <span className="text-ink/40">+</span>}
+                </p>
+                <p className="mt-3 text-xs md:text-sm text-ink/65 leading-relaxed max-w-[200px] mx-auto">
+                  {s.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-16 grid md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-7">
               <p className="text-lg md:text-xl text-ink/75 leading-relaxed font-light">
