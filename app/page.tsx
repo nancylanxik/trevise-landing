@@ -66,77 +66,76 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-16 md:mt-24 grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* Without Trevise */}
-            <div className="bg-cream/5 border border-cream/10 rounded-sm p-6 md:p-8">
-              <p className="eyebrow text-cream/40 mb-6">Today, without Trevise</p>
-              <p className="text-xs text-cream/50 italic mb-4">
-                User asks ChatGPT: "Tell me about this brand's evening bags."
-              </p>
+          {/* Comparison table — clean, AI quote leads */}
+          <div className="mt-12 md:mt-16 max-w-5xl bg-cream/5 border border-cream/15 rounded-sm overflow-hidden">
 
-              <div className="flex gap-4 items-start pb-5 border-b border-cream/10">
-                <div className="w-16 h-16 mock-img-degraded rounded-sm flex-shrink-0" />
-                <div>
-                  <p className="font-serif text-lg text-cream/70 leading-tight">Black handbag, leather</p>
-                  <p className="text-[10px] eyebrow text-cream/30 mt-1.5">Source · 2022 wholesale feed</p>
-                </div>
-              </div>
-
-              <div className="mt-5 space-y-2.5 text-sm">
-                {[
-                  ["Season", "unknown", true],
-                  ["Material", "leather", false],
-                  ["Imagery", "retired campaign", true],
-                  ["Price", "unavailable", true],
-                  ["Languages", "English only", true],
-                  ["Brand voice", "missing", true],
-                ].map(([k, v, faded]) => (
-                  <div key={k as string} className="flex justify-between">
-                    <span className="text-cream/40">{k}</span>
-                    <span className={faded ? "text-cream/30 italic" : "text-cream/60"}>{v}</span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="mt-5 pt-5 border-t border-cream/10 text-xs text-cream/50 leading-relaxed italic">
-                "A black bag from the brand's collection. Made of leather. Available at select retailers worldwide."
+            {/* Question header */}
+            <div className="px-5 md:px-8 py-4 border-b border-cream/15">
+              <p className="eyebrow text-[10px] text-cream/45">Same query, two answers</p>
+              <p className="mt-1.5 italic text-cream/85 text-sm md:text-base">
+                "Tell me about this brand's evening bags."
               </p>
             </div>
 
-            {/* With Trevise */}
-            <div className="bg-cream text-ink rounded-sm p-6 md:p-8">
-              <p className="eyebrow text-ink/50 mb-6">With Trevise</p>
-              <p className="text-xs text-ink/60 italic mb-4">
-                User asks ChatGPT: "Tell me about this brand's evening bags."
-              </p>
+            {/* Column headers (desktop only) */}
+            <div className="hidden md:grid md:grid-cols-12 px-5 md:px-8 py-2.5 border-b border-cream/15">
+              <div className="col-span-3" />
+              <div className="col-span-4 eyebrow text-[10px] text-cream/45">Today</div>
+              <div className="col-span-5 eyebrow text-[10px] text-cream/85">With Trevise</div>
+            </div>
 
-              <div className="flex gap-4 items-start pb-5 border-b border-ink/10">
-                <div className="w-16 h-16 mock-img rounded-sm flex-shrink-0" />
-                <div>
-                  <p className="font-serif text-lg leading-tight">The Marchesa Clutch</p>
-                  <p className="text-[10px] eyebrow text-ink/50 mt-1.5">Maison Atelier · Fall 26</p>
-                </div>
+            {/* AI response — the punchline, up top */}
+            <div className="px-5 md:px-8 py-6 border-b border-cream/15 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-0 md:items-start">
+              <div className="md:col-span-3 text-[11px] eyebrow text-cream/45 md:pt-1">ChatGPT says</div>
+              <div className="md:col-span-4 md:pr-6 text-cream/55 italic text-sm leading-relaxed">
+                <span className="md:hidden text-[10px] eyebrow text-cream/35 mr-2 not-italic">Today:</span>
+                "A black bag from the brand's collection. Made of leather. Available at select retailers worldwide."
               </div>
+              <div className="md:col-span-5 text-cream font-serif italic text-base md:text-lg leading-snug">
+                <span className="md:hidden text-[10px] eyebrow text-cream/55 mr-2 not-italic">Trevise:</span>
+                "Hand-finished in Florentine silk satin, with a sculpted brass clasp drawn from the house's archive."
+              </div>
+            </div>
 
-              <div className="mt-5 space-y-2.5 text-sm">
-                {[
-                  ["Season", "Fall 26"],
-                  ["Material", "Florentine silk satin"],
-                  ["Imagery", "Current campaign"],
-                  ["Price", "$2,840"],
-                  ["Languages", "EN · FR · IT · JA · ZH"],
-                  ["Brand voice", "aligned"],
-                ].map(([k, v]) => (
-                  <div key={k as string} className="flex justify-between">
-                    <span className="text-ink/50">{k}</span>
-                    <span className="text-ink">{v}</span>
+            {/* Supporting attributes — compact, 4 rows */}
+            <div className="px-5 md:px-8 py-2 divide-y divide-cream/10">
+              {[
+                {
+                  label: "Product",
+                  today: "Black handbag, leather",
+                  trevise: "The Marchesa Clutch · Fall 26",
+                },
+                {
+                  label: "Imagery",
+                  today: "retired campaign",
+                  trevise: "Current-season campaign",
+                },
+                {
+                  label: "Languages",
+                  today: "English only",
+                  trevise: "EN · FR · IT · JA · ZH",
+                },
+                {
+                  label: "Brand voice",
+                  today: "missing",
+                  trevise: "aligned",
+                },
+              ].map((row) => (
+                <div
+                  key={row.label}
+                  className="grid grid-cols-1 md:grid-cols-12 py-2.5 gap-1 md:gap-0 md:items-baseline"
+                >
+                  <div className="md:col-span-3 text-[11px] eyebrow text-cream/45">{row.label}</div>
+                  <div className="md:col-span-4 text-cream/45 italic text-sm">
+                    <span className="md:hidden text-[10px] eyebrow text-cream/35 mr-2 not-italic">Today:</span>
+                    {row.today}
                   </div>
-                ))}
-              </div>
-
-              <p className="mt-5 pt-5 border-t border-ink/10 text-xs text-ink/65 leading-relaxed italic">
-                "Hand-finished in Florentine silk satin, with a sculpted brass clasp drawn from the house's archive. An understatement that holds the room."
-              </p>
+                  <div className="md:col-span-5 text-cream text-sm">
+                    <span className="md:hidden text-[10px] eyebrow text-cream/55 mr-2">Trevise:</span>
+                    {row.trevise}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
