@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #faf8f4;
+  --color-ink: #1a1814;
+  --color-stone: #e8e2d6;
+  --color-sand: #d4c5a9;
+  --color-wine: #5b2a2f;
+}
+
+html, body { background: var(--color-cream); color: var(--color-ink); }
+
+.eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Mock product image — gradient placeholder */
+.mock-img {
+  background: linear-gradient(135deg, #d4c5a9 0%, #b89f7c 50%, #8b6f50 100%);
+  position: relative;
+  overflow: hidden;
+}
+.mock-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+}
+
+.mock-img-degraded {
+  background: linear-gradient(135deg, #6b6b6b 0%, #4a4a4a 50%, #3a3a3a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.mock-img-degraded::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  mix-blend-mode: overlay;
+}
+.mock-img-degraded::before {
+  content: "OUT OF DATE";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  z-index: 1;
+}
+
+/* Floating chat card */
+.float-card {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Fade-in helpers */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative ornament */
+.ornament {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+  vertical-align: middle;
+}
+
+.logo-letter {
+  font-family: var(--font-serif), "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -0.04em;
+}
