@@ -35,12 +35,12 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="px-6 md:px-12 pt-16 md:pt-28 pb-28 md:pb-40 max-w-7xl mx-auto">
-        <p className="eyebrow text-ink/60">For premium brands</p>
+        <p className="eyebrow text-ink/60">For ecommerce brands</p>
         <h1 className="mt-6 font-serif text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.95] tracking-tight">
           AI is the <span className="italic">new shelf.</span>
         </h1>
         <p className="mt-10 text-lg md:text-2xl max-w-2xl text-ink/75 leading-relaxed font-light">
-          Your brand belongs on it. In your own voice, with your current imagery, season after season.
+          Your brand belongs on it. In your own voice, with your current imagery, across every model and market.
         </p>
         <div className="mt-12 flex gap-4 flex-wrap">
           <a href="#contact" className="bg-ink text-cream px-8 py-4 hover:bg-ink/85 transition text-sm tracking-wide">
@@ -63,6 +63,9 @@ export default function HomePage() {
             </h2>
             <p className="mt-10 text-lg md:text-xl text-cream/75 leading-relaxed font-light">
               When a customer asks ChatGPT about your brand, the answer comes from old press releases, retired campaign images, and third-party reseller blurbs. The tone is wrong. The imagery is last season. The brand has no say in any of it.
+            </p>
+            <p className="mt-6 font-serif italic text-2xl md:text-3xl text-cream/85 leading-snug">
+              There is no page two inside an AI answer.
             </p>
           </div>
 
@@ -152,7 +155,7 @@ export default function HomePage() {
               <span className="italic">Every AI surface.</span>
             </h2>
             <p className="mt-10 text-lg md:text-xl text-ink/75 leading-relaxed font-light">
-              Trevise consolidates fragmented product data into a structured, brand-aware feed built for the Agentic Commerce Protocol and equivalent standards. Brand voice intact. Current imagery. Multilingual. Refreshed continuously, so LLMs describe, recommend, and depict each piece faithfully across every model.
+              Trevise consolidates fragmented product data into a structured, brand-aware feed built for the Agentic Commerce Protocol and equivalent standards. Brand voice intact. Current imagery. Multilingual. Refreshed continuously, so LLMs describe, recommend, and depict each product faithfully across every model and channel.
             </p>
           </div>
 
@@ -221,7 +224,7 @@ export default function HomePage() {
               <p className="font-serif text-7xl text-ink/20 leading-none">02</p>
               <h3 className="mt-6 font-serif text-3xl">Reconcile</h3>
               <p className="mt-4 text-ink/70 leading-relaxed">
-                We turn fragmented data into a structured, brand-aware catalog. Materials, sizing, current-season imagery, and brand voice are treated as first-class attributes.
+                Catalog data alone is not enough. We layer in what AI agents actually need to recommend a product faithfully: use-case context, comparison anchors, and scope, alongside specifications, materials, brand voice, and current imagery, all as first-class attributes.
               </p>
             </div>
             <div className="border-t border-ink pt-8">
@@ -247,7 +250,7 @@ export default function HomePage() {
           {/* 4 stats embedded — supporting evidence for the urgency thesis */}
           <div className="mt-14 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-ink/15 border-y border-ink/15 py-10">
             {[
-              { num: "100", plus: true, body: "attributes per product, from fit and materials to sourcing" },
+              { num: "100", plus: true, body: "attributes per product, from specifications and materials to sourcing" },
               { num: "10", plus: true, body: "internal systems holding fragments of a single product's data" },
               { num: "5", plus: false, body: "languages a global brand maintains, often inconsistently" },
               { num: "0", plus: false, body: "control most brands have over what AI says about them" },
@@ -270,10 +273,10 @@ export default function HomePage() {
                 Claude, ChatGPT, Gemini and the next generation of LLMs are heading into design tools, creative workflows, regional markets, and enterprise integrations. Every new surface is a new place a brand can show up correctly, or get it wrong.
               </p>
               <p className="mt-6 text-lg md:text-xl text-ink/75 leading-relaxed font-light">
-                A client browsing through a personal AI stylist. A creative director generating a season concept inside an AI design tool. A buyer's assistant comparing one brand's line to another. Each of these surfaces is being built right now, and your brand has no presence on most of them.
+                A client browsing through a personal AI shopping agent. A creative director generating a campaign concept inside an AI design tool. A buyer's assistant comparing one brand's line to another. Each of these surfaces is being built right now, and your brand has no presence on most of them.
               </p>
               <p className="mt-6 text-lg md:text-xl text-ink/75 leading-relaxed font-light">
-                Trevise is the canonical source layer that feeds every AI surface a premium brand touches. Built for the Agentic Commerce Protocol and the multi-model standards emerging across ChatGPT, Gemini, Claude, and Perplexity. One feed. One brand voice. Every model, every market, every season.
+                Trevise is the canonical source layer that feeds every AI surface a brand touches. Built for the Agentic Commerce Protocol and the multi-model standards emerging across ChatGPT, Gemini, Claude, and Perplexity. One feed. One brand voice. Every model, every market, every channel.
               </p>
               <p className="mt-12 font-serif text-2xl md:text-3xl italic text-ink/85 leading-snug">
                 "When someone asks an AI for a recommendation, the brand finally shows up like itself."
@@ -374,7 +377,7 @@ export default function HomePage() {
             We're working with <span className="italic">select brands now.</span>
           </h2>
           <p className="mt-10 text-lg md:text-xl text-cream/75 max-w-3xl leading-relaxed font-light">
-            If you run digital, brand, or e-commerce at a premium brand, we'd love to talk.
+            If you run digital, brand, or e-commerce at a consumer brand, we'd love to talk.
           </p>
           <a
             href="mailto:hello@trevise.ai"
