@@ -162,7 +162,7 @@ export default function HomePage() {
               <div>
                 <p className="eyebrow text-ink/50 mb-6">Your fragmented data</p>
                 <div className="grid grid-cols-2 gap-2 md:gap-3">
-                  {["SAP", "PIM", "DAM", "Power BI", "Looker", "Spreadsheets"].map((s) => (
+                  {["SAP", "Anaplan", "PIM", "DAM", "DIM", "Power BI", "Looker", "Spreadsheets"].map((s) => (
                     <div key={s} className="bg-cream border border-ink/10 px-3 py-3 text-xs text-ink/70">
                       {s}
                     </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
               <p className="font-serif text-7xl text-ink/20 leading-none">01</p>
               <h3 className="mt-6 font-serif text-3xl">Connect</h3>
               <p className="mt-4 text-ink/70 leading-relaxed">
-                We integrate with your SAP, PIM, DAM, BI tools (Power BI, Looker), and the spreadsheets your team actually uses.
+                We integrate with your SAP, Anaplan, PIM, DAM, DIM, BI tools (Power BI, Looker), and the spreadsheets your team actually uses.
               </p>
               <div className="mt-6 pt-5 border-t border-ink/15">
                 <p className="font-serif italic text-base text-ink/85">
