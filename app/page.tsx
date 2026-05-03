@@ -317,30 +317,29 @@ export default function HomePage() {
             </div>
             <div className="md:col-span-7">
               <p className="text-lg md:text-xl text-ink/75 leading-relaxed font-light">
-                Trevise is founded by an operator with merchandising experience across Dior, Saint Laurent, Alaïa, Thélios, and Prada, alongside builders who have scaled products at high-growth startups. Between us, we know how product data actually moves through a fashion house, where it breaks, and how to fix it.
+                Trevise is founded by an operator with hands-on experience across LVMH, Kering, Richemont, and Prada — every major European luxury group — alongside builders who have scaled products at high-growth startups. Between us, we know how product data actually moves through a fashion house, where it breaks, and how to fix it.
               </p>
 
-              {/* Maison strip (within team) */}
+              {/* Group strip — four luxury conglomerates */}
               <div className="mt-10 py-8 border-t border-b border-ink/15">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <p className="eyebrow text-ink/50">Drawn from</p>
-                  <div className="flex items-center gap-5 md:gap-8 flex-wrap">
-                    <span className="logo-letter text-xl md:text-2xl">Dior</span>
-                    <span className="text-ink/20">·</span>
-                    <span className="logo-letter text-xl md:text-2xl">Saint Laurent</span>
-                    <span className="text-ink/20">·</span>
-                    <span className="logo-letter text-xl md:text-2xl">Alaïa</span>
-                    <span className="text-ink/20">·</span>
-                    <span className="logo-letter text-xl md:text-2xl">Prada</span>
-                    <span className="text-ink/20">·</span>
-                    <span className="logo-letter text-xl md:text-2xl text-ink/60 italic">+ high-growth startups</span>
-                  </div>
+                <p className="eyebrow text-ink/50 mb-6">Drawn from</p>
+                <div className="flex flex-wrap items-center gap-x-6 md:gap-x-10 gap-y-3">
+                  <span className="logo-letter text-2xl md:text-3xl">LVMH</span>
+                  <span className="text-ink/25">·</span>
+                  <span className="logo-letter text-2xl md:text-3xl">Kering</span>
+                  <span className="text-ink/25">·</span>
+                  <span className="logo-letter text-2xl md:text-3xl">Richemont</span>
+                  <span className="text-ink/25">·</span>
+                  <span className="logo-letter text-2xl md:text-3xl">Prada</span>
                 </div>
+                <p className="mt-8 text-xs text-ink/55 italic leading-relaxed">
+                  + alongside builders who have scaled products at high-growth startups
+                </p>
               </div>
 
               <div className="mt-12 grid sm:grid-cols-3 gap-6">
                 {[
-                  { num: "01", title: "Inside the maisons", body: "Merchandising work at Dior, Saint Laurent, Alaïa, Thélios, and Prada. Five houses, three of the four major luxury groups." },
+                  { num: "01", title: "Inside the maisons", body: "Hands-on experience across LVMH, Kering, Richemont, and Prada — every major European luxury group." },
                   { num: "02", title: "Product & engineering", body: "Built and shipped products at scale at high-growth startups." },
                   { num: "03", title: "Go-to-market", body: "A track record of taking new categories from zero to enterprise revenue." },
                 ].map((t) => (
