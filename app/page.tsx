@@ -27,6 +27,7 @@ export default function HomePage() {
           <a href="#problem" className="hidden md:inline hover:opacity-60 transition">The problem</a>
           <a href="#solution" className="hidden md:inline hover:opacity-60 transition">What we do</a>
           <a href="#team" className="hidden md:inline hover:opacity-60 transition">Team</a>
+          <a href="/resources" className="hidden md:inline hover:opacity-60 transition">Resources</a>
           <a href="#contact" className="border border-ink px-5 py-2 hover:bg-ink hover:text-cream transition">
             Request access
           </a>
