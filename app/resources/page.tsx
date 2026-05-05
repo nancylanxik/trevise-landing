@@ -9,6 +9,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "2026-ai-commerce-stack",
+    title: "The 2026 AI Commerce Stack",
+    excerpt:
+      "Feed managers, AI visibility trackers, and canonical source layers are pitching brands the same problem. They sound similar. They are not. A buying frame for the leads being asked to choose.",
+    eyebrow: "Comparison",
+    date: "May 2026",
+  },
+  {
+    slug: "how-ai-gets-your-brand-wrong",
+    title: "How AI Gets Your Brand Wrong",
+    excerpt:
+      "When ChatGPT or Gemini describes your products incorrectly, the instinct is to blame the model. The model isn't the problem. The problem is that your product truth lives in five internal systems and almost none of it has been published to the layer the model can read.",
+    eyebrow: "Use case",
+    date: "May 2026",
+  },
+  {
     slug: "why-brands-need-trevise",
     title: "Why Brands Need Trevise",
     excerpt:
