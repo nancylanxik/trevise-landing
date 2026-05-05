@@ -68,10 +68,10 @@ export default function ResourcesIndex() {
       <section className="px-6 md:px-12 pt-16 md:pt-28 pb-16 md:pb-24 max-w-7xl mx-auto">
         <p className="eyebrow text-ink/60">Resources</p>
         <h1 className="mt-6 font-serif text-5xl sm:text-6xl md:text-8xl leading-[0.95] tracking-tight">
-          Field notes from <span className="italic">the new shelf.</span>
+          AI describes your brand. <span className="italic">You author the source.</span>
         </h1>
         <p className="mt-10 text-lg md:text-xl max-w-2xl text-ink/75 leading-relaxed font-light">
-          Essays on brand representation across AI surfaces, the data layer behind the agentic commerce shift, and what brands need to ship to show up correctly.
+          Essays on the data, the stack, and the work brands have to do to show up correctly in ChatGPT, Gemini, Claude, and Perplexity.
         </p>
       </section>
 
@@ -82,14 +82,14 @@ export default function ResourcesIndex() {
             <li key={post.slug} className="border-b border-ink/15">
               <Link
                 href={`/resources/${post.slug}`}
-                className="group block py-10 md:py-14 grid md:grid-cols-12 gap-6 md:gap-12 items-baseline hover:opacity-80 transition"
+                className="group block py-10 md:py-14 grid md:grid-cols-12 gap-6 md:gap-12 items-baseline"
               >
                 <div className="md:col-span-3">
                   <p className="eyebrow text-ink/50">{post.eyebrow}</p>
                   <p className="mt-2 text-sm text-ink/55">{post.date}</p>
                 </div>
                 <div className="md:col-span-9">
-                  <h2 className="font-serif text-3xl md:text-5xl leading-[1.05] tracking-tight group-hover:italic transition-all">
+                  <h2 className="font-serif text-3xl md:text-5xl leading-[1.05] tracking-tight font-normal text-ink origin-left transform-gpu transition-[transform,font-weight,letter-spacing] duration-300 ease-out group-hover:scale-[1.04] group-hover:font-medium group-hover:tracking-[-0.01em]">
                     {post.title}
                   </h2>
                   <p className="mt-5 text-base md:text-lg text-ink/70 leading-relaxed font-light max-w-3xl">
