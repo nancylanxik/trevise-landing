@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "what-the-model-does-not-know",
+    title: "What the Model Does Not Know",
+    excerpt:
+      "The case for brand authorship in the AI commerce era. Human-in-the-loop is not a workflow constraint — it is the architectural commitment that lets a brand keep speaking for itself when models are answering for everyone else.",
+    eyebrow: "Manifesto",
+    date: "May 2026",
+  },
+  {
     slug: "2026-ai-commerce-stack",
     title: "The 2026 AI Commerce Stack",
     excerpt:

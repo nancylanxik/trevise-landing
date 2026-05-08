@@ -41,7 +41,7 @@ export default function HomePage() {
           AI is the <span className="italic">new shelf.</span>
         </h1>
         <p className="mt-10 text-lg md:text-2xl max-w-2xl text-ink/75 leading-relaxed font-light">
-          Your brand belongs on it. In your own voice, with your current imagery, across every model and market.
+          Your brand belongs on it. Described in its own voice, distributed across every model, and tied to the revenue it earns.
         </p>
         <div className="mt-12 flex gap-4 flex-wrap">
           <a href="#contact" className="bg-ink text-cream px-8 py-4 hover:bg-ink/85 transition text-sm tracking-wide">
@@ -66,77 +66,69 @@ export default function HomePage() {
               When a customer asks ChatGPT about your brand, the answer comes from old press releases, retired campaign images, and third-party reseller blurbs. The tone is wrong. The imagery is last season. The brand has no say in any of it.
             </p>
             <p className="mt-6 font-serif italic text-2xl md:text-3xl text-cream/85 leading-snug">
-              There is no page two inside an AI answer.
+              Not in the answer, not in the consideration.
             </p>
           </div>
 
-          {/* Comparison table — clean, AI quote leads */}
-          <div className="mt-12 md:mt-16 max-w-5xl bg-cream/5 border border-cream/15 rounded-sm overflow-hidden">
-
-            {/* Question header */}
-            <div className="px-5 md:px-8 py-4 border-b border-cream/15">
-              <p className="eyebrow text-[10px] text-cream/45">Same query, two answers</p>
-              <p className="mt-1.5 italic text-cream/85 text-sm md:text-base">
-                "Tell me about this brand's evening bags."
-              </p>
-            </div>
-
-            {/* Column headers (desktop only) */}
-            <div className="hidden md:grid md:grid-cols-12 px-5 md:px-8 py-2.5 border-b border-cream/15">
-              <div className="col-span-3" />
-              <div className="col-span-4 eyebrow text-[10px] text-cream/45">Today</div>
-              <div className="col-span-5 eyebrow text-[10px] text-cream/85">With Trevise</div>
-            </div>
-
-            {/* AI response — the punchline, up top */}
-            <div className="px-5 md:px-8 py-6 border-b border-cream/15 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-0 md:items-start">
-              <div className="md:col-span-3 text-[11px] eyebrow text-cream/45 md:pt-1">ChatGPT says</div>
-              <div className="md:col-span-4 md:pr-6 text-cream/55 italic text-sm leading-relaxed">
-                <span className="md:hidden text-[10px] eyebrow text-cream/35 mr-2 not-italic">Today:</span>
-                "A black bag from the brand's collection. Made of leather. Available at select retailers worldwide."
-              </div>
-              <div className="md:col-span-5 text-cream font-serif italic text-base md:text-lg leading-snug">
-                <span className="md:hidden text-[10px] eyebrow text-cream/55 mr-2 not-italic">Trevise:</span>
-                "Hand-finished in Florentine silk satin, with a sculpted brass clasp drawn from the house's archive."
-              </div>
-            </div>
-
-            {/* Supporting attributes — compact, 4 rows */}
-            <div className="px-5 md:px-8 py-2 divide-y divide-cream/10">
+          {/* Chat mockup — symmetrical diptych, two identical chat frames */}
+          <div className="mt-12 md:mt-16 max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-5">
               {[
                 {
-                  label: "Product",
-                  today: "Black handbag, leather",
-                  trevise: "The Marchesa Clutch · Fall 26",
+                  label: "Today",
+                  answer: (
+                    <>
+                      There are several luxury houses with formal evening collections in this range. You might explore boutique websites or department-store curations to compare current options.
+                    </>
+                  ),
+                  footer: "Your brand isn't in the answer",
                 },
                 {
-                  label: "Imagery",
-                  today: "Retired campaign",
-                  trevise: "Current-season campaign",
+                  label: "With Trevise",
+                  answer: (
+                    <>
+                      The <span className="font-medium text-ink">Marchesa Clutch</span> from Fall 26 is a strong fit — <span className="font-medium text-ink">$4,400</span>, hand-finished in Florentine silk satin, with a sculpted brass clasp drawn from the house&apos;s archive. Currently available in Bordeaux, Ivory, and Onyx.
+                    </>
+                  ),
+                  footer: "Accurate product data in every market",
                 },
-                {
-                  label: "Languages",
-                  today: "English only",
-                  trevise: "EN · FR · IT · JA · ZH",
-                },
-                {
-                  label: "Brand voice",
-                  today: "Missing",
-                  trevise: "Aligned",
-                },
-              ].map((row) => (
+              ].map((frame) => (
                 <div
-                  key={row.label}
-                  className="grid grid-cols-1 md:grid-cols-12 py-2.5 gap-1 md:gap-0 md:items-baseline"
+                  key={frame.label}
+                  className="rounded-lg overflow-hidden border border-cream/25 flex flex-col"
                 >
-                  <div className="md:col-span-3 text-[11px] eyebrow text-cream/45">{row.label}</div>
-                  <div className="md:col-span-4 text-cream/45 italic text-sm">
-                    <span className="md:hidden text-[10px] eyebrow text-cream/35 mr-2 not-italic">Today:</span>
-                    {row.today}
+                  {/* App header bar */}
+                  <div className="bg-cream/[0.06] border-b border-cream/15 px-4 py-2.5 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-cream/55" />
+                      <p className="text-[11px] text-cream/70 font-medium tracking-wide">ChatGPT</p>
+                    </div>
+                    <p className="eyebrow text-[10px] text-cream/65">{frame.label}</p>
                   </div>
-                  <div className="md:col-span-5 text-cream text-sm">
-                    <span className="md:hidden text-[10px] eyebrow text-cream/55 mr-2">Trevise:</span>
-                    {row.trevise}
+
+                  {/* Conversation body */}
+                  <div className="bg-cream px-5 md:px-6 py-7 md:py-8 space-y-6 flex-1">
+                    {/* User message */}
+                    <div className="flex justify-end">
+                      <div className="bg-stone/70 text-ink/90 rounded-2xl rounded-br-sm px-4 py-2.5 max-w-[88%] text-sm leading-relaxed">
+                        Find me an evening clutch for a black-tie wedding under $5,000.
+                      </div>
+                    </div>
+
+                    {/* Assistant message */}
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-7 h-7 rounded-full bg-ink flex items-center justify-center mt-0.5">
+                        <span className="text-cream text-[11px]">✦</span>
+                      </div>
+                      <div className="flex-1 text-ink/85 text-sm leading-relaxed pt-0.5">
+                        {frame.answer}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Status footer */}
+                  <div className="bg-cream/[0.05] border-t border-cream/15 px-5 py-3">
+                    <p className="text-[11px] eyebrow text-cream/65">{frame.footer}</p>
                   </div>
                 </div>
               ))}
@@ -156,7 +148,7 @@ export default function HomePage() {
               <span className="italic">Every AI surface.</span>
             </h2>
             <p className="mt-10 text-lg md:text-xl text-ink/75 leading-relaxed font-light">
-              Trevise consolidates fragmented product data into a structured, brand-aware feed built for the Agentic Commerce Protocol and equivalent standards. Brand voice intact. Current imagery. Multilingual. Refreshed continuously, so LLMs describe, recommend, and depict each product faithfully across every model and channel.
+              Trevise consolidates fragmented product data into a structured, brand-aware feed built for OpenAI's ChatGPT Product Feed and the multi-model standards emerging across Gemini, Claude, and Perplexity. Brand voice intact. Current imagery. Multilingual. Daily catalog snapshot with 15–60 minute updates for price, stock, and availability — so what AI sees is what your store sees.
             </p>
           </div>
 
@@ -165,26 +157,33 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
               <div>
                 <p className="eyebrow text-ink/50 mb-6">Your fragmented data</p>
-                <div className="grid grid-cols-2 gap-2 md:gap-3">
-                  {["SAP", "Anaplan", "PIM", "DAM", "DIM", "Power BI", "Looker", "Spreadsheets"].map((s) => (
-                    <div key={s} className="bg-cream border border-ink/10 px-3 py-3 text-xs text-ink/70">
-                      {s}
+                <div className="space-y-5">
+                  {[
+                    { label: "Enterprise systems", items: ["SAP", "PIM", "DAM", "ERP"] },
+                    { label: "Commerce platforms", items: ["Shopify Plus", "Salesforce Commerce"] },
+                    { label: "Operational data", items: ["Customer reviews", "Spreadsheets"] },
+                  ].map((group) => (
+                    <div key={group.label}>
+                      <p className="eyebrow text-[10px] text-ink/40 mb-2">{group.label}</p>
+                      <div className="grid grid-cols-2 gap-2 md:gap-3">
+                        {group.items.map((s) => (
+                          <div key={s} className="bg-cream border border-ink/10 px-3 py-3 text-xs text-ink/70">
+                            {s}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center py-6 md:py-0">
-                <div className="hidden md:block w-full h-px bg-ink/20 relative">
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-ink/40">→</span>
-                </div>
-                <div className="my-6 bg-ink text-cream px-8 py-6 rounded-sm text-center min-w-[140px]">
+              <div className="flex items-center justify-center py-6 md:py-0">
+                <div className="hidden md:block flex-1 h-px bg-ink/15" aria-hidden="true" />
+                <div className="md:mx-3 bg-ink text-cream px-8 py-7 rounded-sm text-center min-w-[150px]">
                   <p className="font-serif text-2xl italic">Trevise</p>
-                  <p className="text-[10px] eyebrow text-cream/60 mt-1">Reconciled</p>
+                  <p className="text-[10px] eyebrow text-cream/60 mt-1.5">Reconciled</p>
                 </div>
-                <div className="hidden md:block w-full h-px bg-ink/20 relative">
-                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-ink/40">→</span>
-                </div>
+                <div className="hidden md:block flex-1 h-px bg-ink/15" aria-hidden="true" />
               </div>
 
               <div>
@@ -204,13 +203,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Three steps — Step 01 has privacy boundary embedded */}
-          <div className="mt-24 md:mt-32 grid md:grid-cols-3 gap-12 md:gap-16">
+          {/* Four steps — Step 01 has privacy boundary embedded */}
+          <div className="mt-24 md:mt-32 grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 lg:gap-12">
             <div className="border-t border-ink pt-8">
               <p className="font-serif text-7xl text-ink/20 leading-none">01</p>
               <h3 className="mt-6 font-serif text-3xl">Connect</h3>
               <p className="mt-4 text-ink/70 leading-relaxed">
-                We integrate with your SAP, Anaplan, PIM, DAM, DIM, BI tools (Power BI, Looker), and the spreadsheets your team actually uses.
+                We integrate with your SAP, PIM, DAM, ERP, commerce platform (Shopify Plus, Salesforce Commerce), reviews data, and the spreadsheets your team actually uses.
               </p>
               <div className="mt-6 pt-5 border-t border-ink/15">
                 <p className="font-serif italic text-base text-ink/85">
@@ -227,13 +226,36 @@ export default function HomePage() {
               <p className="mt-4 text-ink/70 leading-relaxed">
                 Catalog data alone is not enough. We layer in what AI agents actually need to recommend a product faithfully: use-case context, comparison anchors, and scope, alongside specifications, materials, brand voice, and current imagery, all as first-class attributes.
               </p>
+              <div className="mt-6 pt-5 border-t border-ink/15">
+                <p className="font-serif italic text-base text-ink/85">
+                  Nothing brand-sensitive ships without you.
+                </p>
+                <p className="mt-2 text-sm text-ink/60 leading-relaxed">
+                  Every AI-generated claim, comparison, and enrichment is staged for review. Your team approves what goes live, with a full evidence trail back to the source data.
+                </p>
+              </div>
             </div>
             <div className="border-t border-ink pt-8">
               <p className="font-serif text-7xl text-ink/20 leading-none">03</p>
               <h3 className="mt-6 font-serif text-3xl">Publish</h3>
               <p className="mt-4 text-ink/70 leading-relaxed">
-                Your structured feed publishes to the Agentic Commerce Protocol and equivalent standards. ChatGPT, Gemini, Claude, and Perplexity describe and depict your products correctly, in any language, refreshed continuously.
+                Your structured feed publishes to OpenAI's ChatGPT Product Feed and the standards emerging across Gemini, Claude, and Perplexity. Daily catalog snapshot, with 15–60 minute updates for price, stock, and availability — refreshed in any language, on every model.
               </p>
+            </div>
+            <div className="border-t border-ink pt-8">
+              <p className="font-serif text-7xl text-ink/20 leading-none">04</p>
+              <h3 className="mt-6 font-serif text-3xl">Measure</h3>
+              <p className="mt-4 text-ink/70 leading-relaxed">
+                Every product link is tagged. AI-referred sessions, SKU-level conversion, revenue per visit, and feed-version impact tie back to the surface that drove them — exported into GA4, Segment, or your warehouse.
+              </p>
+              <div className="mt-6 pt-5 border-t border-ink/15">
+                <p className="font-serif italic text-base text-ink/85">
+                  The first time the brand sees what AI is actually selling.
+                </p>
+                <p className="mt-2 text-sm text-ink/60 leading-relaxed">
+                  Closes the loop between catalog, distribution, and revenue — so you know which feed version, which surface, and which SKUs are converting.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -252,7 +274,7 @@ export default function HomePage() {
             </div>
             <div className="md:col-span-7">
               <p className="text-lg md:text-xl text-ink/75 leading-relaxed font-light">
-                Trevise is founded by an operator with hands-on experience across LVMH, Kering, Richemont, and Prada — every major European luxury group — alongside builders who have scaled products at high-growth startups. Between us, we know how product data actually moves through a fashion house, where it breaks, and how to fix it.
+                Three founders, three disciplines: luxury fashion operations, large-scale data infrastructure, and enterprise go-to-market. Between us, we have worked across every major European luxury group — and we know how product data actually moves through a brand, where it breaks, and how to fix it.
               </p>
 
               {/* Group strip — four luxury conglomerates */}
@@ -267,21 +289,30 @@ export default function HomePage() {
                   <span className="text-ink/25">·</span>
                   <span className="logo-letter text-2xl md:text-3xl">Prada</span>
                 </div>
-                <p className="mt-8 text-xs text-ink/55 italic leading-relaxed">
-                  + alongside builders who have scaled products at high-growth startups
-                </p>
               </div>
 
               <div className="mt-12 grid sm:grid-cols-3 gap-6">
                 {[
-                  { num: "01", title: "Inside the maisons", body: "Hands-on experience across LVMH, Kering, Richemont, and Prada — every major European luxury group." },
-                  { num: "02", title: "Product & engineering", body: "Built and shipped products at scale at high-growth startups." },
-                  { num: "03", title: "Go-to-market", body: "A track record of taking new categories from zero to enterprise revenue." },
+                  {
+                    num: "01",
+                    title: "Inside the maisons",
+                    body: "What we kept running into from the inside: product data scattered across SAP, PIM, DAM, and shared drives, with no realistic way to wire any of it into the AI tools the houses were starting to bring in.",
+                  },
+                  {
+                    num: "02",
+                    title: "Data infrastructure",
+                    body: "Built ingestion, reconciliation, and AI agent workflows for catalogs at scale. We have made messy enterprise data legible to models before.",
+                  },
+                  {
+                    num: "03",
+                    title: "Go-to-market",
+                    body: "Scaled operating businesses and taken new categories from zero to enterprise revenue.",
+                  },
                 ].map((t) => (
                   <div key={t.num} className="bg-stone/30 p-6 rounded-sm">
                     <p className="eyebrow text-ink/50">{t.num}</p>
                     <p className="mt-3 font-serif text-xl">{t.title}</p>
-                    <p className="mt-2 text-sm text-ink/60">{t.body}</p>
+                    <p className="mt-2 text-sm text-ink/60 leading-relaxed">{t.body}</p>
                   </div>
                 ))}
               </div>

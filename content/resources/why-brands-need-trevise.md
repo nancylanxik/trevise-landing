@@ -73,7 +73,7 @@ A brand showing up correctly across AI surfaces is not a matter of writing bette
 
 **One source of truth.** A single, authoritative description of every product — materials, construction, sourcing, sizing, fit, story, price, availability — rich enough to answer any reasonable question about it.
 
-**Multi-surface readiness.** That truth must be expressible in the formats different AI surfaces actually consume: the Agentic Commerce Protocol, retrieval-friendly product feeds, structured schemas, image-grounded references, and the multi-model standards emerging across ChatGPT, Gemini, Claude, and Perplexity.
+**Multi-surface readiness.** That truth must be expressible in the formats different AI surfaces actually consume: OpenAI's ChatGPT Product Feed, retrieval-friendly product feeds, structured schemas, image-grounded references, and the multi-model standards emerging across Gemini, Claude, and Perplexity.
 
 **Voice consistency.** The brand has to sound like itself in every market and every model. A French heritage brand should not read as a generic descriptor in Korean, and a quiet luxury label should not be flattened into the same vocabulary as a fast-fashion competitor.
 

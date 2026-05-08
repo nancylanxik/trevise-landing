@@ -159,7 +159,7 @@ export default function WhyBrandsNeedTrevise() {
             <div>
               <p className="font-serif text-xl md:text-2xl text-ink">Multi-surface readiness.</p>
               <p className="mt-2 text-ink/75">
-                That truth must be expressible in the formats different AI surfaces actually consume: the Agentic Commerce Protocol, retrieval-friendly product feeds, structured schemas, image-grounded references, and the multi-model standards emerging across ChatGPT, Gemini, Claude, and Perplexity.
+                That truth must be expressible in the formats different AI surfaces actually consume: OpenAI's ChatGPT Product Feed, retrieval-friendly product feeds, structured schemas, image-grounded references, and the multi-model standards emerging across Gemini, Claude, and Perplexity.
               </p>
             </div>
             <div>
